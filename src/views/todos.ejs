@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>JavaLand Demo</title>
+        <link rel="stylesheet" href="/css/demo.css">
+    </head>
+    <body>
+        <h1>Todos:</h1>
+        <% for(var i=0, todo; (todo = todos[i]); i++) { %>
+            <div class="todo">
+                <form class="edit" method="post" action="/edit/<%= todo.id %>">
+                    <input type="text" name="description" value="<%= todo.description %>" size="50">
+                    <input type="checkbox" name="done" value="true" <%= todo.done ? "checked" : "" %>>
+                    <input type="submit" value="Save">
+                </form>
+                <form class="delete" method="post" action="/delete/<%= todo.id %>">
+                    <input type="submit" value="Delete">
+                </form>
+            </div>
+        <% } %>
+
+        <div class="todo new">
+            <form class="create" method="post" action="/create">
+                <input type="text" name="description" size="50">
+                <input type="submit" value="Create">
+            </form>
+        </div>
+    </body>
+</html>

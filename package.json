@@ -1,0 +1,12 @@
+{
+    "name": "javalanddemo",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "3.5.0",
+        "ejs": "0.8.5",
+        "async": "0.2.10",
+        "sqlite3": "~2.1.5",
+        "sequelize": "1.7.0"
+    }
+}
